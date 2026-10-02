@@ -1,6 +1,9 @@
 package no.hvl.dat100.matriser;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
@@ -58,8 +61,8 @@ class MatriserEnhetsTests {
 	@Test
 	void testtilStreng() {
 
-		assertEquals("1 2 3\n4 5 6\n7 8 9\n", Matriser.tilStreng(a));
-		assertEquals("1 2 3\n4 5 6\n7 8 9\n10 11 12\n", Matriser.tilStreng(c));
+		assertEquals("1 2 3 \n4 5 6 \n7 8 9 \n", Matriser.tilStreng(a));
+		assertEquals("1 2 3 \n4 5 6 \n7 8 9 \n10 11 12 \n", Matriser.tilStreng(c));
 	}
 
 	@Test
