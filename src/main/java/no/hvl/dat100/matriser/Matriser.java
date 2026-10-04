@@ -59,18 +59,42 @@ public class Matriser {
 	
 	// e)
 	public static int[][] speile(int[][] matrise) {
+		int n = matrise.length;
+		int m = matrise[0].length;
 
-		// TODO
+		int[][] maSpeilet = new int[n][m];
 
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
-	
+		for(int i = 0; i < n; i++){
+			for(int j = 0; j < m; j++){
+				maSpeilet[i][j] = matrise[j][i];
+			}
+		}
+
+		return maSpeilet;
 	}
 
 	// f)
 	public static int[][] multipliser(int[][] a, int[][] b) {
+		int radA = a.length;
+		int kolA = a[0].length;
+		int radB = b.length;
+		int kolB = b[0].length;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
-	
+		if(kolA != radB){
+			System.out.println("Ugyldige dimensjoner");
+			return null;
+		}
+
+		int[][] maMulti = new int[radA][kolB];
+
+		for(int i = 0; i < radA; i++){
+			for(int j = 0; j < kolB; j++){
+				for(int k = 0; k < radB; k++){
+					maMulti[i][j] += a[i][k] * b[k][j];
+				}
+			}
+		}
+
+		return maMulti;
 	}
 }
